@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <!-- Import Dancing Script font -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ page.title }}</title>
@@ -27,8 +29,10 @@
         box-sizing: border-box;
       }
 
+      /* Apply Dancing Script to the sidebar title */
       .sidebar h1 {
-        font-size: 1.5em;
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.8em;
         margin-bottom: 15px;
       }
 
@@ -74,13 +78,20 @@
         box-sizing: border-box;
         overflow-y: auto;
       }
+
+      /* Apply Dancing Script to the header */
+      .main-content h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <!-- Sidebar -->
       <div class="sidebar">
-        <h1>{{ site.title }}</h1>
+        <h1>{{ site.title }}</h1> <!-- Sidebar Title -->
         <p>{{ site.description }}</p>
 
         <h2>Navigation</h2>
@@ -92,12 +103,12 @@
 
       <!-- Main Content -->
       <div class="main-content">
+        <h1>Welcome to My Portfolio</h1> <!-- Main Header -->
         {{ content }}
       </div>
     </div>
   </body>
 </html>
-
 
 
 
