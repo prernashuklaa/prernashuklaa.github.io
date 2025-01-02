@@ -12,6 +12,46 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+
+    <style>
+    /* Sidebar Navigation Styling */
+    header h2 {
+      color: white; /* Makes "Navigation" text readable */
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    header ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    header ul li {
+      margin-bottom: 10px;
+    }
+
+    header ul li a {
+      display: block;
+      background-color: #b30000; /* Button color */
+      color: white; /* Text color */
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px; /* Rounded corners */
+      overflow: hidden; /* Prevent text overflow */
+      white-space: nowrap; /* Prevent wrapping */
+      text-overflow: ellipsis; /* Add "..." if text is too long */
+    }
+
+    header ul li a:hover {
+      background-color: #800000; /* Darker red on hover */
+    }
+
+    header ul li a:focus {
+      outline: none; /* Remove focus outline */
+      box-shadow: 0 0 3px #fff; /* Add focus shadow */
+    }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -22,7 +62,7 @@
         <h2>Navigation</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="experience.html">Experience and Projects</a></li>
+          <li><a href="experience-and-projects.html">Experience and Projects</a></li>
         </ul>
       </header>
 
@@ -37,3 +77,4 @@
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
 </html>
+
