@@ -9,7 +9,7 @@
       /* General styles */
       body {
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: Arial, sans-serif; /* Consistent font across all pages */
       }
 
       .wrapper {
@@ -18,6 +18,7 @@
         overflow: hidden;
       }
 
+      /* Sidebar styles */
       .sidebar {
         width: 250px;
         background-color: #111;
@@ -27,12 +28,44 @@
       }
 
       .sidebar h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
         font-family: 'Dancing Script', cursive;
-        font-weight: 700;
-        font-size: 1.8em;
+      }
+
+      .sidebar h2 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
         margin-bottom: 15px;
       }
 
+      .sidebar ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        background-color: #b30000;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #800000;
+        cursor: pointer;
+      }
+
+      /* Main content styles */
       .main-content {
         flex: 1;
         padding: 20px;
@@ -40,16 +73,9 @@
         overflow-y: auto;
       }
 
-      .main-content h1 {
-        font-family: 'Dancing Script', cursive;
-        font-weight: 400;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-      }
-
+      /* Dancing Script for the main header */
       h1 {
-        margin: 0;
-        padding: 0;
+        font-family: 'Dancing Script', cursive;
       }
     </style>
   </head>
@@ -57,12 +83,21 @@
     <div class="wrapper">
       <!-- Sidebar -->
       <div class="sidebar">
-        <h1>{{ site.title }}</h1>
+        <h1>Prerna Shukla's Portfolio</h1>
         <p>{{ site.description }}</p>
+
         <h2>Navigation</h2>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="experience.html">Experience and Projects</a></li>
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="experience.html">
+              Experience and Projects
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -73,5 +108,6 @@
     </div>
   </body>
 </html>
+
 
 
