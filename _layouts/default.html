@@ -3,20 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    {% include head-custom.html %}
-
+    <title>{{ page.title }}</title>
     <style>
     /* Sidebar Navigation Styling */
     header h2 {
-      color: white; /* Makes "Navigation" text readable */
+      color: white;
       font-size: 1.2em;
       margin-bottom: 10px;
     }
@@ -27,7 +18,7 @@
     }
 
     header ul li {
-      margin-bottom: 10px;
+      margin-bottom: 15px; /* Add spacing between buttons */
     }
 
     header ul li a {
@@ -38,18 +29,13 @@
       text-align: center;
       padding: 10px;
       border-radius: 5px; /* Rounded corners */
-      overflow: hidden; /* Prevent text overflow */
       white-space: nowrap; /* Prevent wrapping */
-      text-overflow: ellipsis; /* Add "..." if text is too long */
+      text-overflow: ellipsis; /* Add "..." for long text */
+      overflow: hidden;
     }
 
     header ul li a:hover {
       background-color: #800000; /* Darker red on hover */
-    }
-
-    header ul li a:focus {
-      outline: none; /* Remove focus outline */
-      box-shadow: 0 0 3px #fff; /* Add focus shadow */
     }
     </style>
   </head>
@@ -62,7 +48,7 @@
         <h2>Navigation</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="experience.html">Experience and Projects</a></li>
+          <li><a href="experience-and-projects.html">Experience and Projects</a></li>
         </ul>
       </header>
 
@@ -71,10 +57,10 @@
       </section>
 
       <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a>.</small></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
 </html>
+
 
