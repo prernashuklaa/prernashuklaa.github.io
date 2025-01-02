@@ -8,6 +8,8 @@
       /* Wrapper for layout */
       .wrapper {
         display: flex;
+        margin: 0;
+        padding: 0;
       }
 
       /* Sidebar styles */
@@ -17,6 +19,17 @@
         padding: 20px;
         color: white;
         height: 100vh; /* Full height sidebar */
+        box-sizing: border-box;
+      }
+
+      .sidebar h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .sidebar p {
+        margin-bottom: 20px;
+        font-size: 1em;
       }
 
       .sidebar h2 {
@@ -55,6 +68,7 @@
       .main-content {
         flex: 1; /* Take up remaining space */
         padding: 20px;
+        box-sizing: border-box;
       }
     </style>
   </head>
@@ -79,6 +93,7 @@
     </div>
   </body>
 </html>
+
 
 
 
