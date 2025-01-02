@@ -5,42 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ page.title }}</title>
     <style>
-      /* Wrapper for layout */
+      /* General styles */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
       .wrapper {
         display: flex;
-        margin: 0;
-        padding: 0;
+        height: 100vh;
+        overflow: hidden;
       }
 
       /* Sidebar styles */
       .sidebar {
         width: 250px;
         background-color: #111;
-        padding: 20px;
         color: white;
-        height: 100vh; /* Full height sidebar */
+        padding: 20px;
         box-sizing: border-box;
       }
 
       .sidebar h1 {
         font-size: 1.5em;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
 
       .sidebar p {
-        margin-bottom: 20px;
         font-size: 1em;
+        margin-bottom: 20px;
       }
 
       .sidebar h2 {
-        color: white;
         font-size: 1.2em;
         margin-bottom: 15px;
+        color: white;
       }
 
       .sidebar ul {
         list-style: none;
         padding: 0;
+        margin: 0;
       }
 
       .sidebar ul li {
@@ -49,26 +54,24 @@
 
       .sidebar ul li a {
         display: block;
-        background-color: #b30000; /* Button color */
-        color: white; /* Text color */
         text-decoration: none;
+        color: white;
         text-align: center;
+        background-color: #b30000;
         padding: 10px;
-        border-radius: 5px; /* Rounded corners */
-        white-space: nowrap; /* Prevent wrapping */
-        text-overflow: ellipsis; /* Add "..." for long text */
-        overflow: hidden;
+        border-radius: 5px;
       }
 
       .sidebar ul li a:hover {
-        background-color: #800000; /* Darker red on hover */
+        background-color: #800000;
       }
 
       /* Main content styles */
       .main-content {
-        flex: 1; /* Take up remaining space */
+        flex: 1;
         padding: 20px;
         box-sizing: border-box;
+        overflow-y: auto;
       }
     </style>
   </head>
@@ -93,7 +96,6 @@
     </div>
   </body>
 </html>
-
 
 
 
