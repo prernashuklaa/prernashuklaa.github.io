@@ -5,62 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ page.title }}</title>
     <style>
-    /* Sidebar Navigation Styling */
-    header h2 {
-      color: white;
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
+      /* Wrapper for layout */
+      .wrapper {
+        display: flex;
+      }
 
-    header ul {
-      list-style: none;
-      padding: 0;
-    }
+      /* Sidebar styles */
+      .sidebar {
+        width: 250px;
+        background-color: #111;
+        padding: 20px;
+        color: white;
+        height: 100vh; /* Full height sidebar */
+      }
 
-    header ul li {
-      margin-bottom: 15px; /* Add spacing between buttons */
-    }
+      .sidebar h2 {
+        color: white;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
 
-    header ul li a {
-      display: block;
-      background-color: #b30000; /* Button color */
-      color: white; /* Text color */
-      text-decoration: none;
-      text-align: center;
-      padding: 10px;
-      border-radius: 5px; /* Rounded corners */
-      white-space: nowrap; /* Prevent wrapping */
-      text-overflow: ellipsis; /* Add "..." for long text */
-      overflow: hidden;
-    }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
 
-    header ul li a:hover {
-      background-color: #800000; /* Darker red on hover */
-    }
+      .sidebar ul li {
+        margin-bottom: 15px;
+      }
+
+      .sidebar ul li a {
+        display: block;
+        background-color: #b30000; /* Button color */
+        color: white; /* Text color */
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px; /* Rounded corners */
+        white-space: nowrap; /* Prevent wrapping */
+        text-overflow: ellipsis; /* Add "..." for long text */
+        overflow: hidden;
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #800000; /* Darker red on hover */
+      }
+
+      /* Main content styles */
+      .main-content {
+        flex: 1; /* Take up remaining space */
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
-        <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h1>{{ site.title }}</h1>
+        <p>{{ site.description }}</p>
 
         <h2>Navigation</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="experience.html">Experience and Projects</a></li>
         </ul>
-      </header>
+      </div>
 
-      <section>
+      <!-- Main Content -->
+      <div class="main-content">
         {{ content }}
-      </section>
-
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a>.</small></p>
-      </footer>
+      </div>
     </div>
   </body>
 </html>
+
 
 
