@@ -2,3 +2,5 @@ theme: jekyll-theme-dinky
 title: Prerna Shukla's Portfolio
 description: My personal portfolio and projects
 github: https://github.com/prernashuklaa
+sass:
+  style: assets/css/style.css
